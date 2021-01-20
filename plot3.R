@@ -18,7 +18,7 @@ data <- read_delim("household_power_consumption.txt" , delim = ";" ,  col_names 
                                     Sub_metering_3 =  col_number())  )
 #subset the two specific days
 dat <- data
-dat <- dat%>%
+dat <- dat%>% 
   filter(Date == "2007-2-1" | Date == "2007-2-2")
 
 ## plot 3
