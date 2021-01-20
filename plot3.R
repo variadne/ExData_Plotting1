@@ -22,7 +22,7 @@ dat <- dat%>%
   filter(Date == "2007-2-1" | Date == "2007-2-2")
 
 ## plot 3
-
+dt <- with(dat, ymd(Date) + hms(Time))
 png("plot3.png" , width=480, height=480)
 plot(dt, dat$Sub_metering_1, type="l", ylab="Energy Submetering", xlab="")
 lines(dt, dat$Sub_metering_2, type="l", col="red")
